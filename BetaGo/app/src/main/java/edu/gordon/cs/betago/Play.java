@@ -1,6 +1,8 @@
 package edu.gordon.cs.betago;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -25,13 +27,71 @@ public class Play extends AppCompatActivity {
         setContentView(R.layout.activity_play);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar_play);
         setSupportActionBar(myToolbar);
-        /*final Button button = (Button) findViewById(R.id.button_submit);
-        final BoardView boardView = (BoardView) findViewById(R.id.bview);
-        button.setOnClickListener(new View.OnClickListener() {
+        onButtonClickListener();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    public void onButtonClickListener() {
+        final Button buttonSubmit = (Button) findViewById(R.id.button_submit);
+        buttonSubmit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                boardView.setSubmit(true);
+                BoardView boardView = (BoardView) findViewById(R.id.bview);
+                boardView.submit();
             }
-        });*/
+        });
+        final Button buttonPass = (Button) findViewById(R.id.button_pass);
+        buttonPass.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                AlertDialog.Builder aBuilder = new AlertDialog.Builder(Play.this);
+                aBuilder.setMessage("Are you sure you want to pass?")
+                        .setCancelable(true)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener(){
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                final BoardView boardView = (BoardView) findViewById(R.id.bview);
+                                boardView.pass();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener(){
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = aBuilder.create();
+                alert.setTitle("Pass");
+                alert.show();
+                //BoardView boardView = (BoardView) findViewById(R.id.bview);
+                //boardView.pass();
+            }
+        });
+        final Button buttonResign = (Button) findViewById(R.id.button_resign);
+        buttonResign.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                AlertDialog.Builder aBuilder = new AlertDialog.Builder(Play.this);
+                aBuilder.setMessage("Are you sure you want to resign?")
+                        .setCancelable(true)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener(){
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                final BoardView boardView = (BoardView) findViewById(R.id.bview);
+                                boardView.resign();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = aBuilder.create();
+                alert.setTitle("Resign");
+                alert.show();
+                buttonSubmit.setEnabled(false);
+                buttonPass.setEnabled(false);
+                buttonResign.setEnabled(false);
+            }
+        });
     }
 
     @Override

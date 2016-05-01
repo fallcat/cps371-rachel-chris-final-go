@@ -21,12 +21,34 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-        <!--<Button
-            android:layout_width="154dp"
-            android:layout_height="70dp"
-            android:text="New Button"
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="59dp"
+            android:text="Pass"
+            android:id="@+id/button_pass"
+            android:layout_gravity="left|bottom"
+            android:background="@android:drawable/btn_default_small"
+            android:enabled="true"
+            android:visibility="visible" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="59dp"
+            android:text="Submit"
             android:id="@+id/button_submit"
-            android:layout_gravity="center_horizontal|bottom" />-->
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@android:drawable/btn_default_small"
+            android:enabled="true" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="59dp"
+            android:text="Resign"
+            android:id="@+id/button_resign"
+            android:layout_gravity="right|bottom"
+            android:background="@android:drawable/btn_default_small"
+            android:enabled="true"
+            android:visibility="visible" />
     </FrameLayout>
 
 

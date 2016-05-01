@@ -31,7 +31,8 @@
             android:padding="20dip"
             android:textSize="32sp"
             weight="1"
-            android:background="@android:drawable/btn_default" />
+            android:background="@android:drawable/btn_default"
+            android:enabled="false" />
 
         <Button
             android:text="Play Locally"
