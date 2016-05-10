@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <PreferenceCategory android:title="Player Names" >
+        <EditTextPreference
+            android:title="Black"
+            android:defaultValue="Black"
+            android:key="prefBlackName" />
+        <EditTextPreference
+            android:title="White"
+            android:defaultValue="White"
+            android:key="prefWhiteName"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Theme" >
+        <ListPreference
+            android:key="prefBoard"
+            android:title="Board"
+            android:entries="@array/board"
+            android:entryValues="@array/boardValues"
+            />
+        <ListPreference
+            android:key="prefBlackStones"
+            android:title="Black Stones"
+            android:entries="@array/blackStones"
+            android:entryValues="@array/blackStonesValues"
+            />
+        <ListPreference
+            android:key="prefWhiteStones"
+            android:title="White Stones"
+            android:entries="@array/whiteStones"
+            android:entryValues="@array/whiteStonesValues"
+            />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="prefCoord"
+            android:title="Show coordinates" >
+        </SwitchPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Music" >
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="prefMusic"
+            android:title="Enable Background Music"
+            android:id="@+id/pref_music">
+        </SwitchPreference>
+        <ListPreference
+            android:key="prefMusicList"
+            android:title="Choose Music"
+            android:entries="@array/music"
+            android:entryValues="@array/musicValues"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>

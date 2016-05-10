@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="board">
+        <item name="0">Kaya</item>
+        <item name="1">Wood</item>
+        <item name="2">Wood2</item>
+    </string-array>
+    <string-array name="boardValues">
+        <item name="0">0</item>
+        <item name="1">1</item>
+        <item name="2">2</item>
+    </string-array>
+    <string-array name="blackStones">
+        <item name="0">Glass</item>
+        <item name="1">Night</item>
+        <item name="2">Plain</item>
+        <item name="3">Slate</item>
+        <item name="4">Worn glass</item>
+    </string-array>
+    <string-array name="blackStonesValues">
+        <item name="0">0</item>
+        <item name="1">1</item>
+        <item name="2">2</item>
+        <item name="3">3</item>
+        <item name="4">4</item>
+    </string-array>
+    <string-array name="whiteStones">
+        <item name="0">Glass</item>
+        <item name="1">Night</item>
+        <item name="2">Plain</item>
+        <item name="3">Shell</item>
+        <item name="4">Worn glass</item>
+    </string-array>
+    <string-array name="whiteStonesValues">
+        <item name="0">0</item>
+        <item name="1">1</item>
+        <item name="2">2</item>
+        <item name="3">3</item>
+        <item name="4">4</item>
+    </string-array>
+    <string-array name="music">
+        <item name="0">High Mountains and Running Water</item>
+        <item name="1">Dreamcatcher</item>
+    </string-array>
+    <string-array name="musicValues">
+        <item name="0">0</item>
+        <item name="1">1</item>
+    </string-array>
+
+</resources>

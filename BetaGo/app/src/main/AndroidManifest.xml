@@ -9,7 +9,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".MainActivity">
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,11 +20,13 @@
         <activity
             android:name=".Play"
             android:label="Play"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".Settings"
             android:label="Settings"
-            android:parentActivityName=".Play"></activity>
+            android:parentActivityName=".Play"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

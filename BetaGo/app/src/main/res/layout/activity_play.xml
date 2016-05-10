@@ -20,10 +20,9 @@
             android:id="@+id/bview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-
         <Button
-            android:layout_width="80dp"
-            android:layout_height="59dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
             android:text="Pass"
             android:id="@+id/button_pass"
             android:layout_gravity="left|bottom"
@@ -32,17 +31,20 @@
             android:visibility="visible" />
 
         <Button
-            android:layout_width="80dp"
-            android:layout_height="59dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:text="Submit"
             android:id="@+id/button_submit"
             android:layout_gravity="center_horizontal|bottom"
-            android:background="@android:drawable/btn_default_small"
-            android:enabled="true" />
+            android:background="@android:color/holo_orange_light"
+            android:enabled="false"
+            android:backgroundTint="#6d3b15"
+            android:backgroundTintMode="screen"
+            android:shadowColor="#9c9c9c" />
 
         <Button
-            android:layout_width="80dp"
-            android:layout_height="59dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
             android:text="Resign"
             android:id="@+id/button_resign"
             android:layout_gravity="right|bottom"
